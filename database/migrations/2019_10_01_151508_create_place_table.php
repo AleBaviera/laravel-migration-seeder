@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Place;
 
 class CreatePlaceTable extends Migration
 {
@@ -14,8 +15,12 @@ class CreatePlaceTable extends Migration
     public function up()
     {
         Schema::create('place', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+          $table->bigIncrements('id');
+          $table->string('name');
+          $table->string('address');
+          $table->string('city');
+          $table->date('nation');
+          $table->timestamps();
         });
     }
 

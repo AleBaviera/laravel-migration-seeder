@@ -4,9 +4,13 @@
 
 use App\Model;
 use Faker\Generator as Faker;
+use App\Company;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Company::class, function (Faker $faker) {
     return [
-        //
+      'name'=> $faker-> firstName,
+      'phone'=> $faker-> ollFreePhoneNumber,
+      'mail'=> $faker-> email,
+      'website'=> $faker-> url
     ];
 });

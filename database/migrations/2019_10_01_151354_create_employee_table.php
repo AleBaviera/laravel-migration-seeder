@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Employee;
 
 class CreateEmployeeTable extends Migration
 {
@@ -15,6 +16,11 @@ class CreateEmployeeTable extends Migration
     {
         Schema::create('employee', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('firstName');
+            $table->string('lastName');
+            $table->string('jobTitle');
+            $table->date('bithDay');
+            $table->float('salary', 6,2);
             $table->timestamps();
         });
     }
