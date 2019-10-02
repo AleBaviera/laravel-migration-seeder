@@ -11,5 +11,6 @@
 |
 */
 
-Route::get('/place', 'PlaceController@index');
+Route::get('/place', 'PlaceController@index')-> name('placeIndex');
 Route::get('/create', 'PlaceController@create')-> name('placeCreate');
+Route::post('/store', 'PlaceController@store')-> name('placeStore');

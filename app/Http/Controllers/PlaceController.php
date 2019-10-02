@@ -25,7 +25,7 @@ class PlaceController extends Controller
      */
     public function create()
     {
-        //
+      return view('page.place-create');
     }
 
     /**
@@ -36,7 +36,14 @@ class PlaceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $validatedData = $request->validate([
+          "name" => "required",
+          "address" => "required",
+          "city" => "required",
+          "nation" => "required"
+        ]);
+        $place = Place::create($validatedData);
+        return redirect('/place');
     }
 
     /**
