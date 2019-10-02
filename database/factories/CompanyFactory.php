@@ -9,8 +9,8 @@ use App\Company;
 $factory->define(Company::class, function (Faker $faker) {
     return [
       'name'=> $faker-> firstName,
-      'phone'=> $faker-> ollFreePhoneNumber,
+      'phone'=> $faker-> phoneNumber,
       'mail'=> $faker-> email,
-      'website'=> $faker-> url
+      'website'=> $faker-> ipv4
     ];
 });

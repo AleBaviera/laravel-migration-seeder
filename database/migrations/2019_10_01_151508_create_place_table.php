@@ -14,12 +14,12 @@ class CreatePlaceTable extends Migration
      */
     public function up()
     {
-        Schema::create('place', function (Blueprint $table) {
+        Schema::create('places', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->string('name');
           $table->string('address');
           $table->string('city');
-          $table->date('nation');
+          $table->string('nation');
           $table->timestamps();
         });
     }
