@@ -12,3 +12,4 @@
 */
 
 Route::get('/place', 'PlaceController@index');
+Route::get('/create', 'PlaceController@create')-> name('placeCreate');
